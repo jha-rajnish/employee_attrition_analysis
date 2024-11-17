@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Attrition Analysis</title>
+
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Employee Attrition Analysis">
+  <meta property="og:description" content="A comprehensive analysis of employee attrition data to identify patterns and factors influencing employee turnover.">
+  <meta property="og:image" content="./assets/image/display-pic.jpg">
+  <meta property="og:url" content="jha-rajnish.github.io/employee_attrition_analysis/">
+  <meta property="og:type" content="Project">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./assets/icon/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/icon/favicon.png">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<div id="backgroundBlur" class="background-blur"></div>
+<div class="container content-container">
+  <div align="center" class="heading1">
+    Employee Attrition Analysis
+  </div>
+  <div class="divider-rounded"></div>
+
+  <div class="heading2">
+    Project Objective
+  </div>
+  <div class="divider-dashed"></div>
+  <p class="paragraph">
+    To develop a comprehensive Employee Attrition Analysis dashboard that provides actionable insights into the factors contributing to employee turnover.
+    This dashboard aims to help the organization understand the key drivers of attrition, such as education level, marital status, age group, education field, gender, department, travel requirements, job role, job satisfaction, job level, and work experience.
+    The ultimate goal is to identify trends and patterns in employee attrition, enabling the organization to implement effective retention strategies and improve overall employee satisfaction and engagement.
+  </p>
+  
+  <div align="center" class="heading2">
+    <h2>
+     Dashboard
+    </h2>
+   </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active" id="slide1">
+        <img src="./assets/dashboard/Page-01.jpg" class="img-thumbnail" alt="Page-01">
+      </div>
+
+      <div class="item" id="slide2">
+        <img src="./assets/dashboard/Page-02.jpg" class="img-thumbnail" alt="Page-02">
+      </div>
+
+      <div class="item" id="slide2">
+        <img src="./assets/dashboard/Page-03.jpg" class="img-thumbnail" alt="Page-03">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <div class="heading3">
+      <h3>
+        🛠️Software Toolkits:
+      </h3>
+    </div>
+    <div class="software-toolkit">
+      <a href="https://www.postgresql.org/" target="_blank">
+        <img src="./assets/icon/PostgreSQL.png" alt="PostgreSQL" height="25" width="24.25">
+      </a>
+      <a href="https://www.databricks.com/" target="_blank">
+        <img src="./assets/icon/Databricks.png" alt="Databricks" height="25" width="23.4042553191">
+      </a>
+      <a href="https://www.microsoft.com/en-in/microsoft-365/excel" target="_blank">
+        <img src="./assets/icon/Microsoft_Excel.png" alt="Microsoft Excel" height="25" width="28.6259541985">
+      </a>
+      <a href="https://powerbi.microsoft.com/" target="_blank">
+        <img src="./assets/icon/Microsoft_Power-BI.png" alt="Microsoft Power-BI" height="25" width="18.75">
+      </a>
+    </div>
+  </div>
+  <div class="divider-dotted"></div>
+
+    <div align="center" class="heading2">
+      <h2 class="center">
+        🔍Problem Statement📝
+      </h2>
+    </div>
+    <div class="divider-dashed"></div>
+    <p class="paragraph">
+        <strong>1. Attrition by Education Level:</strong><br>
+        Analyze employee attrition based on their highest level of education.
+        <br><br>
+        <strong>2. Attrition by Marital Status:</strong><br>
+        Examine attrition rates according to employees' marital status.
+        <br><br>
+        <strong>3. Attrition by Age Group:</strong><br>
+        Assess attrition across different age groups.
+        <br><br>
+        <strong>4. Attrition by Education Field:</strong><br>
+        Investigate attrition rates by employees' field of education.
+        <br><br>
+        <strong>5. Attrition in Department:</strong><br>
+        Determine attrition rates within various departments.
+        <br><br>
+        <strong>6. Attrition by Gender:</strong><br>
+        Compare attrition rates between male and female employees.
+        <br><br>
+        <strong>7. Attrition by Travel Requirements:</strong><br>
+        Evaluate whether travel requirements contribute to employee attrition.
+        <br><br>
+        <strong>8. Attrition in Job Role:</strong><br>
+        Analyze attrition rates within different job roles.
+        <br><br>
+        <strong>9. Attrition in Job Level:</strong><br>
+        Investigate attrition rates across various job levels.
+        <br><br>
+        <strong>10. Job Satisfaction of Departed Employees:</strong><br>
+        Measure the job satisfaction levels of employees who left the company.
+        <br><br>
+        <strong>11. Attrition by Work Experience:</strong><br>
+        Display a graph of the working years of employees who have left the company.
+    </p>
+
+    <div class="heading2">
+      <h2 align="center" class="center">
+        📈Analysis Report🧐
+      </h2>
+    </div>
+    <div class="divider-dashed"></div>
+    
+      <div class="question-heading">
+        1. Attrition by Education Level:
+      </div>
+      <p class="paragraph">
+       &nbsp;&nbsp;• UG - (99/41.77%)<br>
+       &nbsp;&nbsp;• PG - (58/24.47%)<br>
+       &nbsp;&nbsp;• 12th - (44/18.57%)<br>
+       &nbsp;&nbsp;• 10th - (31/13.08%)<br>
+       &nbsp;&nbsp;• PHD - (5/2.11%)<br>
+       <br>
+      </p>
+     
+     <div class="question-heading">
+       2. Attrition by Marital Status:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Single - (120/50.63%)<br>
+       &nbsp;&nbsp;• Married - (84/35.44%)<br>
+       &nbsp;&nbsp;• Divorced - (33/13.92%)<br>
+       <br>
+      </p>
+     
+     <div class="question-heading">
+       3. Attrition by Age Group:
+     </div>
+     
+     <p class="paragraph">
+       &nbsp;&nbsp;• 31 to 45 - (103/43.46%)<br>
+       &nbsp;&nbsp;• 15 to 30 - (100/42.19%)<br>
+       &nbsp;&nbsp;• 46 to 60 - (34/14.35%)<br>
+       <br>
+      </p>
+
+     <div class="question-heading">
+       4. Attrition by Education Field:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Life Science - (89/37.55%)<br>
+       &nbsp;&nbsp;• Medical - (63/26.58%)<br>
+       &nbsp;&nbsp;• Marketing - (35/14.77%)<br>
+       &nbsp;&nbsp;• Techinical Degree - (32/13.50%)<br>
+       &nbsp;&nbsp;• Other - (11/4.64%)<br>
+       &nbsp;&nbsp;• Human Resource - (7/2.95%)<br>
+       <br>
+     </p>
+
+     <div class="question-heading">
+       5. Attrition in Department:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Research & Developement - (133/56.12%)<br>
+       &nbsp;&nbsp;• Sales - (92/38.82%)<br>
+       &nbsp;&nbsp;• Human Resource - (12/5.06%)<br>
+       <br>
+     </p>
+
+     <div class="question-heading">
+       6. Attrition by Gender:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Male - (150/63.29%)<br>
+       &nbsp;&nbsp;• Female - (87/36.71%)<br>
+       <br>
+     </p>
+
+     <div class="question-heading">
+       7. Attrition by Travel Requirements:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Rarely Travellery - (156/65.82%)<br>
+       &nbsp;&nbsp;• Frequently Traveller - (69/29.11%)<br>
+       &nbsp;&nbsp;• Non Traveller - (12/5.06%)<br>
+       <br>
+     </p>
+
+     <div class="question-heading">
+       8. Attrition in Job Role:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Laboratory Technician - (62/26.16%)<br>
+       &nbsp;&nbsp;• Sales Executive - (57/24.05%)<br>
+       &nbsp;&nbsp;• Research Scientist - (47/19.83%)<br>
+       &nbsp;&nbsp;• Sales Representative - (33/13.92%)<br>
+       &nbsp;&nbsp;• Human Resource - (12/5.06%)<br>
+       &nbsp;&nbsp;• Manufacturing Director - (10/4.22%)<br>
+       &nbsp;&nbsp;• Healthcare Representative - (9/3.80%)<br>
+       &nbsp;&nbsp;• Manager - (5/2.11%)<br>
+       &nbsp;&nbsp;• Research Director - (2/0.84%)<br>
+       <br>
+     </p>
+
+     <div class="question-heading">
+       9. Attrition in Job Level:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Job Level_1 - (143/60.34%)<br>
+       &nbsp;&nbsp;• Job Level_2 - (52/21.94%)<br>
+       &nbsp;&nbsp;• Job Level_3 - (32/13.50%)<br>
+       &nbsp;&nbsp;• Job Level_4 - (5/2.11%)<br>
+       &nbsp;&nbsp;• Job Level_5 - (5/2.11%)<br>
+       <br>
+     </p>
+
+     <div class="question-heading">
+       10. Job Satisfaction of Departed Employees:
+     </div>
+     <p class="paragraph">
+       &nbsp;&nbsp;• Satisfaction Level_1 - (66/27.85%)<br>
+       &nbsp;&nbsp;• Satisfaction Level_2 - (46/19.41%)<br>
+       &nbsp;&nbsp;• Satisfaction Level_3 - (73/30.80%)<br>
+       &nbsp;&nbsp;• Satisfaction Level_4 - (52/21.94%)<br>
+       <br>
+     </p>
+     
+     <div align="center" class="question-heading">
+       11. Attrition by Work Experience:
+     </div>
+     <div class="carousel-inner">
+        <div class="item active" id="slide1">
+          <img src="./assets/snapshot/question_no-11.png" class="img-thumbnail" alt="question_no-11">
+        </div>
+        </div>
+     <br>
+
+     <div align="center" class="heading2">
+       <h2>
+         Conclusion📌
+       </h2>
+    </div>
+    <div class="divider-dashed"></div>
+    <p class="paragraph">
+      <strong>1. Targeted Retention Programs:</strong><br>
+      The analysis reveals significant attrition among employees with undergraduate and postgraduate degrees, as well as those in the 31-45 and 15-30 age groups.
+      Implementing targeted retention programs focusing on career development, growth opportunities, and age-specific engagement strategies can help mitigate these high attrition rates.
+      <br><br>
+      <strong>2. Work-Life Balance Initiatives:</strong><br>
+      Single employees have the highest attrition rates, indicating a need for better work-life balance initiatives.
+      Providing flexible work arrangements, support systems, and work-life balance programs can enhance employee satisfaction and retention.
+      <br><br>
+      <strong>3. Department-Specific Strategies:</strong><br>
+      The Research & Development and Sales departments experience the highest attrition rates.
+      Tailoring retention strategies to address the specific needs and challenges of these departments, such as offering professional development opportunities and recognizing achievements, can reduce turnover.
+      <br><br>
+      <strong>4. Gender-Sensitive Policies:</strong><br>
+      With a higher attrition rate among male employees, developing gender-sensitive policies and creating a supportive work environment that addresses the unique needs of both male and female employees can contribute to improved retention.
+      <br><br>
+      <strong>5. Reducing Travel-Related Attrition:</strong><br>
+      A significant portion of attrition is observed among employees with frequent travel requirements.
+      Introducing policies that reduce the need for frequent travel, offering remote work options, or providing additional support for traveling employees can help lower attrition rates related to travel demands.
+    </p>
+
+    <div align="right" class="heading3">
+      Connect with me:
+    </div>
+    <p align="right" class="paragraph">
+      <a href="https://linkedin.com/in/jharajnish" target="_blank">
+        <img src="./assets/icon/LinkedIn.svg" alt="LinkedIn" height="25" width="25">
+      </a>
+
+      <a href="https://github.com/jha-rajnish" target="_blank">
+        <img src="./assets/icon/GitHub.svg" alt="GitHub" height="25" width="25.5555555556">
+      </a>
+
+      <a href="https://instagram.com/rajnish_gallery" target="_blank">
+        <img src="./assets/icon/Instagram.svg" alt="Instagram" height="25" width="25">
+      </a>
+    </p>
+
+ <div style="display: flex; justify-content: space-between;">
+    <p class="paragraph">
+      📂 Visit this Repo:<br>
+      <a href="https://github.com/jha-rajnish/employee_attrition_analysis" target="_blank">
+        Employee Attrition Analysis
+      </a>
+    </p>
+    <p class="paragraph">
+      ✉ Reach me:<br>
+      <a href="mailto:jharajnish@outlook.in">
+        jharajnish@outlook.in
+      </a>
+    </p>
+ </div>
+ <div class="divider-dotted"></div>
+
+       <!-- Copyright -->
+        <p class="footer-copyright">
+            © 2023 Rajnish Jha, India. All Rights Reserved.
+        </p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="./js/scripts.js" defer></script>
+</body>
+</html>
